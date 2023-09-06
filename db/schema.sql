@@ -5,24 +5,23 @@ USE business_db;
 
 CREATE TABLE departments (
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    department_name VARCHAR(100) NOT NULL
+    name VARCHAR(30) NOT NULL
 );
 
 CREATE TABLE roles (
-    id INT NOT NULL AUTO_INCREMENT,
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     title VARCHAR(100) NOT NULL,
     salary INT NOT NULL,
-    department INT NOT NULL,
-    PRIMARY KEY (id),
-    FOREIGN KEY (department) REFERENCES departments(id)
+    department_id INT NOT NULL,
+    FOREIGN KEY (department_id) REFERENCES departments(id)
 );
 
 CREATE TABLE employees (
-    id INT NOT NULL AUTO_INCREMENT,
-    first_name VARCHAR(100) NOT NULL,
-    last_name VARCHAR(100) NOT NULL,
-    manager VARCHAR(100),
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    first_name VARCHAR(30) NOT NULL,
+    last_name VARCHAR(30) NOT NULL,
+    manager_id INT,
     role_id INT NOT NULL,
-    PRIMARY KEY (id),
-    FOREIGN KEY (role_id) REFERENCES roles(id)
+    FOREIGN KEY (role_id) REFERENCES roles(id),
+    FOREIGN KEY (manager_id) REFERENCES employees(id)
 );
