@@ -5,6 +5,11 @@
 
 A content management system for business owners to easily keep track of employees roles and departments.
 
+
+## Video
+
+https://watch.screencastify.com/v/4iDvXUH8VmvX7lYvxzJI
+
 ## Table of Contents
 
 - [Installation](#installation)
@@ -20,7 +25,7 @@ Clone the repository and run npm i.
 
 ## Usage
 
-Put in your mysql credentials into the connection .js file.
+Put in your mysql credentials into the connection.js file then run node index.js in the terminal and follow the prompts.
 
 ## License 
 
@@ -29,7 +34,7 @@ https://opensource.org/licenses/MIT
 
 ## How to Contribute
 
-Make a pr and I will approve it.
+Make a pull request and I will approve it.
 
 ## Tests
 
